@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8051:8080"
+    env_file:
+      - ./.env
+    restart: always
+    
+# if needed to use redirect with docker names like http://web:8080
+#    networks:
+#      - your_net
+#networks:
+#  your_net:
+#    external: true
